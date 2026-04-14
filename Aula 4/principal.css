@@ -1,0 +1,35 @@
+principal.css
+body{
+    /*seletor = o nome da "marcação" que se quer formatar.
+    Não se deve colocar os sinais de maoir e menor <> na marcação.
+    É obrigatório colocar as chaves {} */
+    background-color: rgb(16, 79, 82);
+    color: rgb(214, 214, 214);
+    /* Esse atributo representa plano de fundo.
+        Deve receber sempre cor como valor.
+    */
+     font-family: Arial, Helvetica, sans-serif;
+    /* família porque eu seleciono um estilo:
+        - serifado
+        - sem serifa
+        - caligrafia
+        -decorativa ...
+     */
+    color:cyan;
+    font-size: 2rem;
+    /* par colocar o tamnho da fonte é necessário colocar um número e uma unidade: px, rem, em, %, cm ...*/
+}
+h1{
+    text-align: center;
+}
+h2{
+    background-color: aqua;
+    color: rgb(51, 89, 91);
+}
+li{
+    /* atributo que formata apenas listas */
+    /* list-style-type: altera os marcadores */
+    list-style-type:square;
+    background-color: rgb(51, 90, 91);
+    list-style-position: inside;
+} 
