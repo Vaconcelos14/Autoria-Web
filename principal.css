@@ -1,0 +1,335 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #222;
+}
+
+
+/* ==============================
+   CABEÇALHO
+================================= */
+
+header {
+    height: 195px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("bg.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* TÍTULO */
+
+header h1 {
+    color: white;
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 300;
+
+    padding-top: 60px;
+}
+
+
+/* ==============================
+   MENU
+================================= */
+
+header nav {
+    width: 100%;
+    height: 45px;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+
+/* ==============================
+   SEÇÃO O CURSO
+================================= */
+
+.curso {
+    width: 580px;
+
+    margin: 35px auto 45px;
+
+    text-align: center;
+}
+
+.curso h2 {
+    font-size: 24px;
+
+    font-weight: 300;
+
+    margin-bottom: 20px;
+}
+
+
+/* CÍRCULO AO LADO DE "O CURSO" */
+
+.curso h2::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid #111;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+    vertical-align: -1px;
+}
+
+.curso p {
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #222;
+}
+
+
+/* ==============================
+   CARDS
+================================= */
+
+.cards {
+    width: 580px;
+
+    margin: 0 auto 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px 18px;
+}
+
+
+/* CARD */
+
+.card {
+    height: 186px;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.10)
+        ),
+        url("bg-boxes.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: 0.3s;
+}
+
+
+/* EFEITO DO MOUSE */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==============================
+   IMAGENS DOS CARDS
+================================= */
+
+.card figure {
+    height: 65px;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+
+/* ==============================
+   TÍTULO DOS CARDS
+================================= */
+
+.card h3 {
+    font-size: 23px;
+
+    font-weight: 300;
+
+    margin-top: 3px;
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+   TEXTO DOS CARDS
+================================= */
+
+.card p {
+    max-width: 145px;
+
+    margin: 0 auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    line-height: 1.4;
+}
+
+
+/* ==============================
+   RODAPÉ
+================================= */
+
+footer {
+    height: 70px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+}
+
+
+/* MENU DAS REDES SOCIAIS */
+
+footer nav {
+    margin-right: 40px;
+}
+
+footer ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer img {
+    width: 15px;
+    height: 15px;
+
+    object-fit: contain;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 700px) {
+
+    .curso {
+        width: 90%;
+    }
+
+    .cards {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 8px;
+    }
+}
